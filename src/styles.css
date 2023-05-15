@@ -99,17 +99,6 @@ h6 {
     scroll-behavior: auto !important;
   }
 }
-body {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1rem;
-  color: #00AA3C;
-}
-
-.navbar {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.5rem;
-}
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -118,8 +107,10 @@ body {
   padding: 16px;
   width: 100%;
   background-color: #242628;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
 }
-.navbar__logo {
+.navbar__logo-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -127,29 +118,59 @@ body {
   gap: 5px;
   font-size: 2rem;
 }
-.navbar__logo, .navbar__savedGames {
+.navbar__logo-container, .navbar__savedGames {
   cursor: pointer;
+}
+.navbar__savedGames {
+  font-size: 30px;
+}
+.navbar__logo {
+  max-width: 50%;
+}
+@media screen and (min-width: 500px) {
+  .navbar__logo {
+    font-size: 2rem;
+  }
 }
 
 .menu {
   height: 100vh;
-  width: 25%;
-  position: absolute;
-  right: -25%;
-  background-color: #242628;
-  transition: width 200ms ease-in, right 200ms ease-in;
+  width: 50%;
   padding: 1rem;
+  position: absolute;
+  right: -50%;
+  background-color: #242628;
+  border-left: 2px solid #00AA3C;
+  transition: all 200ms ease-in;
 }
 .menu.open {
   right: 0;
 }
+@media screen and (min-width: 500px) {
+  .menu {
+    width: 25%;
+    right: -25%;
+  }
+}
+
+.app {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  color: #00AA3C;
+}
 
 .home {
   width: 100%;
-  transition: width 200ms ease-in, right 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 .home.menu-is-open {
-  width: 75%;
+  transform: translate(-50%);
+}
+@media screen and (min-width: 500px) {
+  .home.menu-is-open {
+    transform: none;
+    width: 75%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

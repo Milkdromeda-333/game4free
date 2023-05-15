@@ -1,5 +1,7 @@
 @use "../abstracts";
 
 .app {
-    
+    font-family: abstracts.$font-text;
+    font-size: 1rem;
+    color: abstracts.$color-green
 }

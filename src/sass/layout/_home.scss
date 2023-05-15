@@ -5,6 +5,13 @@
     transition: abstracts.$menu-transition;
 
     &.menu-is-open {
-        width: 100% - 25%;
+        transform: translate(-50%);
+    }
+
+    @media screen and (min-width: 500px) {
+        &.menu-is-open {
+            transform: none;
+            width: 100% - 25%;
+        }
     }
 }

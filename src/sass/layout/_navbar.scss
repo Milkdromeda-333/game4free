@@ -5,16 +5,31 @@
     padding: 16px;
     width: 100%;
     background-color: abstracts.$color-black;
+    font-family: abstracts.$font-logo;
+    font-size: 1.5rem;
 
-    &__logo {
+    &__logo-container {
         @include abstracts.flexbox(row, center, center);
         gap: 5px;
-
-        font-size: 2rem;
+        font-size: 2rem
     }
 
-    &__logo,
+    &__logo-container,
     &__savedGames {
         cursor: pointer;
+    }
+
+    &__savedGames {
+        font-size: 30px;
+    }
+
+    &__logo {
+        max-width: 50%;
+    }
+
+    @media screen and (min-width: 500px) {
+        &__logo {
+                font-size: 2rem;
+        }
     }
 }
