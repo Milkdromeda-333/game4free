@@ -1,0 +1,10 @@
+@use "../abstracts";
+
+.home {
+    width: 100%;
+    transition: abstracts.$menu-transition;
+
+    &.menu-is-open {
+        width: 100% - 25%;
+    }
+}

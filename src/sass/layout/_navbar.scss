@@ -1,0 +1,20 @@
+@use "../abstracts";
+
+.navbar {
+    @include abstracts.flexbox(row, space-between, center);
+    padding: 16px;
+    width: 100%;
+    background-color: abstracts.$color-black;
+
+    &__logo {
+        @include abstracts.flexbox(row, center, center);
+        gap: 5px;
+
+        font-size: 2rem;
+    }
+
+    &__logo,
+    &__savedGames {
+        cursor: pointer;
+    }
+}
