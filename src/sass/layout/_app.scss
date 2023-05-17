@@ -2,6 +2,14 @@
 
 .app {
     font-family: abstracts.$font-text;
-    font-size: 1rem;
-    color: abstracts.$color-green
+    font-size: abstracts.$font-size-small-text;
+    color: abstracts.$color-green;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    @media screen and (min-width: 500px) {
+        
+    }
 }

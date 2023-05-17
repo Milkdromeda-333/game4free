@@ -38,12 +38,11 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
                 <img src={currnetLogo} alt="logo" className='navbar__logo' />
                 <span>Game4Free</span>
             </div>
-            <i onClick={toggleMenu}>
-                {!isMenuOpen ?
-                    <AiOutlineHeart className="navbar__savedGames" />
-                    : <AiFillHeart className="navbar__savedGames" />
-                }
-            </i>
+            
+            {!isMenuOpen ?
+                <AiOutlineHeart className="navbar__savedGames" onClick={toggleMenu} />
+                : <AiFillHeart className="navbar__savedGames" onClick={toggleMenu} />
+            }
         </nav>
     )
 }

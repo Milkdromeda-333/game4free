@@ -21,4 +21,4 @@ export default function Home() {
 
 ##  FEATURES TODO:
 - [  ] make logo animate on hover
-- [  ] make charecter change onmount
+- [ x ] make charecter change onmount

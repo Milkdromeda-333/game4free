@@ -10,6 +10,11 @@
     
 
     background-color: abstracts.$color-black;
+    // GRADIENT MADE WITH https: //cssgradient.io/
+    background: -moz-linear-gradient(90deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    background: -webkit-linear-gradient(90deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    background: linear-gradient(90deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242628", endColorstr="#242628", GradientType=1);
     border-left: 2px solid abstracts.$color-green;
     transition: abstracts.$menu-transition;
 

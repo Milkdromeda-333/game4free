@@ -5,13 +5,19 @@
     padding: 16px;
     width: 100%;
     background-color: abstracts.$color-black;
+    // GRADIENT MADE WITH https: //cssgradient.io/
+    background: -moz-linear-gradient(180deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    background: -webkit-linear-gradient(180deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    background: linear-gradient(180deg, rgba(36, 38, 40, 1) 4%, rgba(64, 69, 73, 1) 50%, rgba(36, 38, 40, 1) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242628", endColorstr="#242628", GradientType=1);
+
     font-family: abstracts.$font-logo;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     &__logo-container {
         @include abstracts.flexbox(row, center, center);
         gap: 5px;
-        font-size: 2rem
+        font-size: 1.5rem
     }
 
     &__logo-container,
@@ -20,16 +26,6 @@
     }
 
     &__savedGames {
-        font-size: 30px;
-    }
-
-    &__logo {
-        max-width: 50%;
-    }
-
-    @media screen and (min-width: 500px) {
-        &__logo {
-                font-size: 2rem;
-        }
+        font-size: 25px;
     }
 }

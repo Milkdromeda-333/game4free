@@ -1,0 +1,33 @@
+@use "../abstracts";
+
+.hero {
+    @include abstracts.flexbox(column, center, center);
+
+    height: 80vh;
+    width: 100%;
+    padding: 16px;
+
+    background-color: abstracts.$color-black;
+    background-image: url(https://wallpaperaccess.com/full/236691.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:soft-light;
+    
+    h1 {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    @media screen and (min-width: 350px) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}

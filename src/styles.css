@@ -7,10 +7,11 @@
  *  --------
  *   FONTS
  *  --------
- font-family: 'Chakra Petch', sans-serif;
- font-family: 'Exo 2',sans-serif;
- font-family: 'IBM Plex Mono', monospace;
- font-family: 'Red Hat Display', sans-serif;
+*/
+/*
+    * --------
+    *   FONT SIZES
+    * --------
 */
 /* resets from: https: //andy-bell.co.uk/a-modern-css-reset/
     and altered my me
@@ -50,7 +51,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: red;
@@ -107,8 +108,12 @@ h6 {
   padding: 16px;
   width: 100%;
   background-color: #242628;
+  background: -moz-linear-gradient(180deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  background: -webkit-linear-gradient(180deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  background: linear-gradient(180deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242628", endColorstr="#242628", GradientType=1);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .navbar__logo-container {
   display: flex;
@@ -116,21 +121,13 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .navbar__logo-container, .navbar__savedGames {
   cursor: pointer;
 }
 .navbar__savedGames {
-  font-size: 30px;
-}
-.navbar__logo {
-  max-width: 50%;
-}
-@media screen and (min-width: 500px) {
-  .navbar__logo {
-    font-size: 2rem;
-  }
+  font-size: 25px;
 }
 
 .menu {
@@ -140,6 +137,10 @@ h6 {
   position: absolute;
   right: -50%;
   background-color: #242628;
+  background: -moz-linear-gradient(90deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  background: -webkit-linear-gradient(90deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  background: linear-gradient(90deg, rgb(36, 38, 40) 4%, rgb(64, 69, 73) 50%, rgb(36, 38, 40) 94%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242628", endColorstr="#242628", GradientType=1);
   border-left: 2px solid #00AA3C;
   transition: all 200ms ease-in;
 }
@@ -154,11 +155,13 @@ h6 {
 }
 
 .app {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 1rem;
   color: #00AA3C;
 }
-
+.app h2 {
+  font-size: 1.2rem;
+}
 .home {
   width: 100%;
   transition: all 200ms ease-in;
@@ -170,6 +173,52 @@ h6 {
   .home.menu-is-open {
     transform: none;
     width: 75%;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  padding: 16px;
+  background-color: #242628;
+  background-image: url(https://wallpaperaccess.com/full/236691.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+@media screen and (min-width: 350px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.searchbar {
+  width: 100%;
+}
+.searchbar__searchbar {
+  width: 100%;
+  padding: 10px;
+}
+.searchbar__searchbar:active, .searchbar__searchbar:focus {
+  outline: 2px solid #00AA3C;
+}
+@media screen and (min-width: 1000px) {
+  .searchbar {
+    width: 50%;
   }
 }
 
