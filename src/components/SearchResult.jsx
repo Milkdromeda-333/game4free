@@ -1,7 +1,7 @@
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
+export default function SearchResult({title, thumbnail, platform, game_url, isSaved}) {
 
-export default function SearchResult({title, thumbnail, platform, game_url}) {
-    
     return (
         <div className="search-result">
             <img src={thumbnail} alt="thumbnail" className="search-result__thumbnail" />
@@ -14,6 +14,11 @@ export default function SearchResult({title, thumbnail, platform, game_url}) {
                 </h2>
                 <span>{platform}</span>
             </div>
+
+            {isSaved ?
+                <AiFillHeart className="search-result__heart" /> :
+                <AiOutlineHeart className="search-result__heart" />
+            }
         </div>
     )
 }

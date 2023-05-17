@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
-import SearchResult from "./SearchResult"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import SearchResult from "./SearchResult";
 
-/* 
-when user types in letters for the name of a game it returns cards that match the query.
-*/
 export default function Searchbar() {
 
     const [userQuery, setUserQuery] = useState(null);
@@ -23,10 +20,14 @@ export default function Searchbar() {
         if (value) {
             const filteredGames = liveGames.filter(game => game.title.toLowerCase().trim().startsWith(value));
             setFoundGames(filteredGames);
-
         } else {
-            setFoundGames([]); 
+            setFoundGames([]);
         }
+    }
+
+    function resetQuery() {
+        setUserQuery("");
+        setFoundGames([]);
     }
 
     useEffect(() => {
@@ -41,17 +42,16 @@ export default function Searchbar() {
             };
             axios.request(options)
                 .then(response => { setLiveGames(response.data); })
-                .catch(err => console.log);
+                .catch(err => console.log(err));
         }
     }, []);
     
     return (
-        <form className="searchbar">
+        <form className="searchbar" onBlur={ resetQuery }>
             <input type="search"
-                name="search"
-                id="search"
                 onChange={updateQuery}
                 className="searchbar__searchbar"
+                value={userQuery}
                 placeholder="have a game in mind? search the name."
             />
             <ul className="searchbar__results-container">{resultsBoxesArr}</ul>

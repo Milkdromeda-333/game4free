@@ -19,7 +19,21 @@
         color: abstracts.$color-red;
     }
 
+    &__heart {
+        font-size: 20px;
+        margin-left: auto;
+        color: abstracts.$color-red;
+    }
+
     @media screen and (min-width: 400px) {
+
+        &__heart {
+            font-size: 25px;
+
+            &:hover {
+                color: adjust-color($color: abstracts.$color-red, $lightness: -25%);
+            }
+        }
 
         &:hover {
             background-color: abstracts.$color-green;
@@ -29,6 +43,14 @@
 
                 &:hover {
                     color: blue;
+                }
+
+                &:visited {
+                    color: purple;
+
+                    &:hover {
+                        color: blue;
+                    }
                 }
             }
         }

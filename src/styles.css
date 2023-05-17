@@ -158,6 +158,8 @@ h6 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 1rem;
   color: #00AA3C;
+  background-color: #242628;
+  min-height: 100vh;
 }
 .app h2 {
   font-size: 1.2rem;
@@ -215,6 +217,7 @@ h6 {
   top: 100%;
   left: 0;
   background-color: #242628;
+  outline: 1px dashed #00AA3C;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -251,7 +254,18 @@ h6 {
 .search-result__body {
   color: #ff2b2b;
 }
+.search-result__heart {
+  font-size: 20px;
+  margin-left: auto;
+  color: #ff2b2b;
+}
 @media screen and (min-width: 400px) {
+  .search-result__heart {
+    font-size: 25px;
+  }
+  .search-result__heart:hover {
+    color: #ab0000;
+  }
   .search-result:hover {
     background-color: #00AA3C;
   }
@@ -259,6 +273,12 @@ h6 {
     color: white;
   }
   .search-result:hover .search-result__title:hover {
+    color: blue;
+  }
+  .search-result:hover .search-result__title:visited {
+    color: purple;
+  }
+  .search-result:hover .search-result__title:visited:hover {
     color: blue;
   }
 }
