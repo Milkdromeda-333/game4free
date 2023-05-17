@@ -5,6 +5,7 @@ import Menu from "./components/Menu"
 function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   }

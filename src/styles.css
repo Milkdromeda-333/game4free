@@ -208,6 +208,16 @@ h6 {
 
 .searchbar {
   width: 100%;
+  position: relative;
+}
+.searchbar__results-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #242628;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .searchbar__searchbar {
   width: 100%;
@@ -219,6 +229,37 @@ h6 {
 @media screen and (min-width: 1000px) {
   .searchbar {
     width: 50%;
+  }
+}
+
+.search-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  height: 100px;
+  padding: 10px;
+}
+.search-result__thumbnail {
+  margin: 0;
+  height: 100%;
+}
+.search-result__title {
+  color: #00AA3C;
+}
+.search-result__body {
+  color: #ff2b2b;
+}
+@media screen and (min-width: 400px) {
+  .search-result:hover {
+    background-color: #00AA3C;
+  }
+  .search-result:hover .search-result__title {
+    color: white;
+  }
+  .search-result:hover .search-result__title:hover {
+    color: blue;
   }
 }
 

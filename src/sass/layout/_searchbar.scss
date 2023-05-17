@@ -2,6 +2,17 @@
 
 .searchbar {
     width: 100%;
+    position: relative;
+
+    &__results-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: abstracts.$color-black;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
 
     &__searchbar {

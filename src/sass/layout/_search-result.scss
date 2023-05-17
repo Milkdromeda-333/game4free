@@ -1,0 +1,36 @@
+@use "../abstracts";
+
+.search-result {
+    @include abstracts.flexbox(row, start, center);
+    gap: 16px;
+    height: 100px;
+    padding: 10px;
+
+    &__thumbnail {
+        margin: 0;
+        height: 100%;
+    }
+
+    &__title {
+        color: abstracts.$color-green;
+    }
+
+    &__body {
+        color: abstracts.$color-red;
+    }
+
+    @media screen and (min-width: 400px) {
+
+        &:hover {
+            background-color: abstracts.$color-green;
+
+            & .search-result__title {
+                color: white;
+
+                &:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+}
