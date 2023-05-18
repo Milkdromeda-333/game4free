@@ -8,9 +8,12 @@
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 999;
         background-color: abstracts.$color-black;
         outline: 1px dashed abstracts.$color-green;
         width: 100%;
+        max-height: 300px;
+        overflow-x: scroll;
         margin: 0;
         padding: 0;
     }
@@ -29,5 +32,19 @@
 
     @media screen and (min-width: 1000px) {
         width: 50%;
+
+        &__results-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        background-color: abstracts.$color-black;
+        outline: 1px dashed abstracts.$color-green;
+        width: 100%;
+        max-height: 500px;
+        overflow-x: scroll;
+        margin: 0;
+        padding: 0;
+    }
     }
 }

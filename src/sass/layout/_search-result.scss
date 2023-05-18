@@ -31,28 +31,21 @@
             font-size: 25px;
 
             &:hover {
-                color: adjust-color($color: abstracts.$color-red, $lightness: -25%);
+                color: adjust-color($color: abstracts.$color-red, $lightness: -15%);
             }
         }
 
+        &__title:hover,
+        &__title:visited:hover {
+            color: dodgerblue;
+        }
+
+        &__title:visited {
+            color: slateblue;
+        }
+
         &:hover {
-            background-color: abstracts.$color-green;
-
-            & .search-result__title {
-                color: white;
-
-                &:hover {
-                    color: blue;
-                }
-
-                &:visited {
-                    color: purple;
-
-                    &:hover {
-                        color: blue;
-                    }
-                }
-            }
+            background-color: adjust-color($color: abstracts.$color-black, $lightness: -2%);
         }
     }
 }
