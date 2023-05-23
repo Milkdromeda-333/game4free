@@ -1,0 +1,6 @@
+@use "../abstracts";
+
+.game-box{
+    @include abstracts.flexbox(row, center, center);
+    width: 100%;
+}

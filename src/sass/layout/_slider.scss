@@ -1,0 +1,13 @@
+@use "../abstracts";
+
+.slider {
+    @include abstracts.flexbox(row, center, center);
+    margin: 0 auto;
+    width: 100%;
+
+    &__games-container {
+        @include abstracts.flexbox(row, start, center);
+        overflow-x: hidden;
+        width: 90%;
+    }
+}

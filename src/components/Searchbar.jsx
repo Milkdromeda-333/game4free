@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import SearchResult from "./SearchResult";
+// import { getAllGames } from "./utils";
 
-export default function Searchbar() {
+export default function Searchbar({liveGames}) {
 
     const [userQuery, setUserQuery] = useState("");
-    const [liveGames, setLiveGames] = useState([]);
     const [foundGames, setFoundGames] = useState(null);
 
     const myRef = useRef();
@@ -37,22 +37,6 @@ export default function Searchbar() {
         }
         
     }
-
-    useEffect(() => {
-        if (liveGames.length === 0) {
-            const options = {
-                method: 'GET',
-                url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-                headers: {
-                    'X-RapidAPI-Key': 'ab056877aemshde15c09950613b1p18f654jsn08cf22bdd987',
-                    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-                }
-            };
-            axios.request(options)
-                .then(response => { setLiveGames(response.data); })
-                .catch(err => console.log(err));
-        }
-    }, []);
     
     return (
         <form className="searchbar">

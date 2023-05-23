@@ -7,9 +7,12 @@
         - COMPONENTS: re-usable styles for small components
     - to watch for sass changes, run "sass --watch [directory to sass index file] [directory to css file]". Youll have to pre-create the output file i think.
     - To use variables inport the abstracts file like "@use '../abstracts"'
+- I FIGURED OUT HOW TO RETURN DATA FROM A HTTP REQUEST USING A UTIL FUNCTION. Basically, return the axios call and within it return the data fetched. Them in the module importing the util, create an asyncrounous function withing the useEffect and use the data there! example is in `src/components/Home`
 
 
 Dump:
+
+
 export default function Home() {
     
     return (
@@ -18,6 +21,23 @@ export default function Home() {
         </div>
     )
 }
+
+<!-- game -->
+<!-- {
+  {
+    "id": 540,
+    "title": "Overwatch 2",
+    "thumbnail": "https://www.freetogame.com/g/540/thumbnail.jpg",
+    "short_description": "A hero-focused first-person team shooter from Blizzard Entertainment.",
+    "game_url": "https://www.freetogame.com/open/overwatch-2",
+    "genre": "Shooter",
+    "platform": "PC (Windows)",
+    "publisher": "Activision Blizzard",
+    "developer": "Blizzard Entertainment",
+    "release_date": "20developer22-10-04",
+    "freetogame_profile_url": "https://www.freetogame.com/overwatch-2"
+  }
+} -->
 
 ##  FEATURES TODO:
 - [  ] make logo animate on hover
